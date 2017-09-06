@@ -53,6 +53,9 @@ public class Control : MonoBehaviour {
 			unvisited.Add (n);
 			GameObject.Find (n + "").GetComponent<Room> ().tDistance = 1000000;
 			GameObject.Find (n + "").GetComponent<Room> ().visited=false;
+			if (n.Length>=8 && n.Substring (0, 8) == "corridor")
+				GameObject.Find (n + "").transform.GetChild (0).GetChild (0).GetComponent<Image> ().enabled = false;
+			
 		}
 		path = new List<Node> ();
 
@@ -79,7 +82,7 @@ public class Control : MonoBehaviour {
 	{
         try
         {
-            PathAB(A.GetComponent<InputField>().text.ToUpper(), B.GetComponent<InputField>().text.ToUpper());
+            PathAB(A.GetComponent<InputField>().text, B.GetComponent<InputField>().text,false);
 
         }
         catch
@@ -89,6 +92,34 @@ public class Control : MonoBehaviour {
 
     }
 
+	public void reset()
+	{
+		foreach (string n in rooms) {
+			GameObject.Find (n + "").GetComponent<Room> ().tDistance = 1000000;
+			GameObject.Find (n + "").GetComponent<Room> ().visited=false;
+			GameObject.Find (n + "").transform.GetChild (0).GetChild (0).GetComponent<Image> ().enabled = true;
+			GameObject.Find (n + "").transform.GetChild (0).GetChild (1).GetComponent<Text> ().enabled = true;
+			LineRenderer lineRenderer = GameObject.Find (n + "").GetComponent<LineRenderer>();
+			lineRenderer.enabled = false;
+			if (n.Length>=8 && n.Substring (0, 8) == "corridor")
+				GameObject.Find (n + "").transform.GetChild (0).GetChild (0).GetComponent<Image> ().enabled = false;
+		}
+	}
+
+	public void search(string target)
+	{
+		foreach (string n in rooms) {
+			if (n != target) {
+				GameObject.Find (n + "").transform.GetChild (0).GetChild (0).GetComponent<Image> ().enabled = false;
+				GameObject.Find (n + "").transform.GetChild (0).GetChild (1).GetComponent<Text> ().enabled = false;
+			} else {
+				GameObject.Find (n + "").transform.GetChild (0).GetChild (0).GetComponent<Image> ().enabled = true;
+				GameObject.Find (n + "").transform.GetChild (0).GetChild (1).GetComponent<Text> ().enabled = true;
+			}
+		
+		}
+	}
+
 	bool isNeighbor(string id, string[]neighbors)
 	{
 		foreach (string s in neighbors)
@@ -96,12 +127,22 @@ public class Control : MonoBehaviour {
 				return true;
 		return false;
 	}
-	void PathAB(string a, string b)
+	public void PathAB(string a, string b, bool reference)
 	{	
 		foreach (string n in rooms) {
 			unvisited.Add (n);
 			GameObject.Find (n + "").GetComponent<Room> ().tDistance = 1000000;
 			GameObject.Find (n + "").GetComponent<Room> ().visited=false;
+
+			if (!reference) {
+				GameObject.Find (n + "").transform.GetChild (0).GetChild (0).GetComponent<Image> ().enabled = false;
+				GameObject.Find (n + "").transform.GetChild (0).GetChild (1).GetComponent<Text> ().enabled = false;
+			} else {
+				if (n.Length < 8 || n.Substring (0, 8) != "corridor") {
+					GameObject.Find (n + "").transform.GetChild (0).GetChild (0).GetComponent<Image> ().enabled = true;
+					GameObject.Find (n + "").transform.GetChild (0).GetChild (1).GetComponent<Text> ().enabled = true;
+				}
+			}
 		}
 		foreach (string n in rooms) {
 			GameObject.Find (n + "").GetComponent<LineRenderer> ().enabled = false;
@@ -188,6 +229,10 @@ public class Control : MonoBehaviour {
 			lineRenderer.enabled = true;
 			lineRenderer.SetPositions (positions);
 
+			GameObject.Find (solution[i] + "").transform.GetChild (0).GetChild (0).GetComponent<Image> ().enabled = true;
+			GameObject.Find (solution[i] + "").transform.GetChild (0).GetChild (1).GetComponent<Text> ().enabled = true;
+			GameObject.Find (solution[i-1] + "").transform.GetChild (0).GetChild (0).GetComponent<Image> ().enabled = true;
+			GameObject.Find (solution[i-1] + "").transform.GetChild (0).GetChild (1).GetComponent<Text> ().enabled = true;
 		}
 	}
 }
