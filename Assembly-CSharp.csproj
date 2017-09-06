@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{DC12AFC5-0F32-1259-0188-72654A588782}</ProjectGuid>
+    <ProjectGuid>{2DA195B1-4DA7-A577-ACCA-ECF144B92C4C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -53,6 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Control.cs" />
      <Compile Include="Assets\Scripts\Drag.cs" />
+     <Compile Include="Assets\Scripts\PinchZoom.cs" />
      <Compile Include="Assets\Scripts\Room.cs" />
      <Compile Include="Assets\Scripts\UI.cs" />
  <Reference Include="UnityEngine.UI">
