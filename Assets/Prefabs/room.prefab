@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 120629849637159820}
   - component: {fileID: 222401343410860914}
   m_Layer: 0
-  m_Name: 400 (1)
+  m_Name: room
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -40,8 +40,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a6d029d3e2601e40a60de6da8afe7d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  neighbors: f4010000
-  distances: 01000000
+  neighbors: []
+  distances: []
+  visited: 0
+  tDistance: 0
+  corridor: 0
 --- !u!120 &120629849637159820
 LineRenderer:
   m_ObjectHideFlags: 1

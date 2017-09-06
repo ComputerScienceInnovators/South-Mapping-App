@@ -77,8 +77,17 @@ public class Control : MonoBehaviour {
 
 	public void OnClick()
 	{
-		PathAB (A.GetComponent<InputField> ().text, B.GetComponent<InputField> ().text);
-	}
+        try
+        {
+            PathAB(A.GetComponent<InputField>().text.ToUpper(), B.GetComponent<InputField>().text.ToUpper());
+
+        }
+        catch
+        {
+            Debug.LogError("Text is wrong");
+        }
+
+    }
 
 	bool isNeighbor(string id, string[]neighbors)
 	{
