@@ -350,17 +350,17 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 97162681}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.4808865, y: 1.4808866, z: 1.4808866}
+  m_LocalScale: {x: 1.6500016, y: 1.6500016, z: 1.6500016}
   m_Children:
   - {fileID: 1250914262}
-  m_Father: {fileID: 634815531}
-  m_RootOrder: 11
+  m_Father: {fileID: 1315598262}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -207}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -2.1429443, y: -703.5}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &97162683
@@ -471,16 +471,16 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 144608815}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.7813058, y: 1.7813078, z: 1.7813078}
+  m_LocalScale: {x: 1.6500016, y: 1.6500016, z: 1.6500016}
   m_Children: []
-  m_Father: {fileID: 634815531}
-  m_RootOrder: 8
+  m_Father: {fileID: 1315598262}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 17, y: -112}
+  m_AnchoredPosition: {x: 0.107055664, y: -96}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &144608817
@@ -1163,10 +1163,7 @@ RectTransform:
   - {fileID: 1642519110}
   - {fileID: 1100623661}
   - {fileID: 320808096}
-  - {fileID: 144608816}
-  - {fileID: 1851496372}
-  - {fileID: 1955892373}
-  - {fileID: 97162682}
+  - {fileID: 1315598262}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2021,6 +2018,56 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1250914261}
+--- !u!1 &1315598261
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1315598262}
+  - component: {fileID: 1315598263}
+  m_Layer: 5
+  m_Name: UISubParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1315598262
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1315598261}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 144608816}
+  - {fileID: 1851496372}
+  - {fileID: 1955892373}
+  - {fileID: 97162682}
+  m_Father: {fileID: 634815531}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -39}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1315598263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1315598261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6740b882f07025745ac5f1ab2a37f434, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  factor: 800
 --- !u!1 &1557049821
 GameObject:
   m_ObjectHideFlags: 0
@@ -2427,15 +2474,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1851496371}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 0.69233185, y: 0.6923318, z: 0.6923318}
+  m_LocalPosition: {x: 0, y: 0, z: -7.5}
+  m_LocalScale: {x: 1.6500016, y: 1.6500016, z: 1.6500016}
   m_Children: []
-  m_Father: {fileID: 634815531}
-  m_RootOrder: 9
+  m_Father: {fileID: 1315598262}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 5, y: -339}
+  m_AnchoredPosition: {x: 1.6070557, y: -550.5}
   m_SizeDelta: {x: 1000, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1851496373
@@ -2459,7 +2506,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
+    m_FontSize: 24
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
@@ -2649,16 +2696,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1955892372}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 0.7692893, y: 0.76928926, z: 0.76928926}
+  m_LocalPosition: {x: 0, y: 0, z: -7.5}
+  m_LocalScale: {x: 1.6500016, y: 1.6500016, z: 1.6500016}
   m_Children: []
-  m_Father: {fileID: 634815531}
-  m_RootOrder: 10
+  m_Father: {fileID: 1315598262}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 34, y: -340}
-  m_SizeDelta: {x: 600, y: 400}
+  m_AnchoredPosition: {x: 9.107056, y: -480.75}
+  m_SizeDelta: {x: 300, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1955892374
 MonoBehaviour:
@@ -2681,7 +2728,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_FontSize: 16
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
@@ -2695,8 +2742,6 @@ MonoBehaviour:
   m_Text: 'Created by the Computer Science Innovators Club Officers:
 
     Jimmy Shi, Rohit Jayaram, Elizabeth Johnson, Benjamin Wu, Peter Wu
-
-    (Small screen sizes not yet supported, upper floor science wing in development)
 
     (Stay tuned for the upcoming "schedules" feature, save your schedules and find
     paths for each block!  releases on 9/9!)'
