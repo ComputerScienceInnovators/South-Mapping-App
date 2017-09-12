@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\CameraHandler.cs" />
      <Compile Include="Assets\Scripts\Control.cs" />
      <Compile Include="Assets\Scripts\Drag.cs" />
+     <Compile Include="Assets\Scripts\LockingCamera.cs" />
      <Compile Include="Assets\Scripts\OpenPath.cs" />
      <Compile Include="Assets\Scripts\OpenRoom.cs" />
      <Compile Include="Assets\Scripts\PinchZoom.cs" />
